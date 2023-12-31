@@ -33,13 +33,14 @@ Sum = X'Y+XY' = X ⊕ Y
 Carry=X'Y
 
 ## PROGRAM:
+```
 module project_4_1(a,b,borrow,diff);	                                                   
 input a,b;
 output borrow,diff;
 assign borrow=~a&b;
 assign diff=a^b;
 endmodule
-
+```
 ## RTL REALIZATION:
 ![image](https://github.com/MALENIMURUGAN/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/144870675/f7a311be-72da-4fbd-afa0-49e55ca17572)
 ## TRUTH TABLE:
@@ -54,13 +55,14 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## PROGRAM:
+```
 module project_4_2(a,b,bin,borrow,diff);	                                               
 input a,b,bin;
 output diff,borrow;
 assign diff=(a^b)^bin;
 assign borrow=((~a)&&bin)||(b&&bin)||((~a)&&b);
 endmodule
-
+```
 ## RTL REALIZATION:
 ![image](https://github.com/MALENIMURUGAN/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/144870675/33d35784-00c6-46ca-a8d3-ab30c6414d91)
 ## TRUTH TABLE:
